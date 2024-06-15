@@ -1,0 +1,173 @@
+src/CardCarousel.css
+/* Add this to your existing CSS file */
+body{
+  /* background-image: url('../asset/about.png'); */
+  /* background-image: url('../asset/free.png'); */
+  background-size: cover; /* Ensures the background image covers the entire container */
+  background-position: center;
+  height: 100%;
+  font-family: 'cursive', cursive;
+}
+h2 {
+  font-family: 'Arial', sans-serif; /* Choose a clean, readable font */
+  font-size: 2.5rem; /* Adjust the size as needed */
+  font-weight: bold; /* Make the text bold */
+  color:  rgb(13, 110, 252); /* Dark grey color for text */
+  text-align: center; /* Center-align the text */
+  margin-top: 20px; /* Space above the heading */
+  margin-bottom: 20px; /* Space below the heading */
+  text-transform: uppercase; /* Convert text to uppercase */
+  letter-spacing: 2px; /* Add some space between letters */
+  position: relative; /* Set position for pseudo-element */
+  font-family: 'cursive', cursive;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 100px; /* Width of the underline */
+  height: 4px; /* Thickness of the underline */
+  background-color: #6347ff; /* Tomato color for underline */
+  margin: 10px auto 0; /* Space around the underline */
+  /* border-radius: 2px; Rounded edges for the underline */
+}
+
+/* Carousel container */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Carousel card */
+.carousel-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.689);
+  /* border-radius: 15px; */
+  overflow: hidden;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.carousel-card-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Carousel card image */
+.carousel-card-image {
+  flex: 1;
+  height: 100%;
+}
+
+.carousel-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Carousel card description */
+.carousel-card-description {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f8f9fa; /* Light background color for contrast */
+  /* border-radius: 8px; Rounded corners for a smoother look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth animation for hover effects */
+}
+
+.carousel-card-description:hover {
+  transform: translateY(-5px); /* Slight upward movement on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.carousel-card-title {
+  font-size: 1.75rem; /* Slightly larger font size for the title */
+  font-weight: bold;
+  margin-bottom: 0.75rem; /* Increased space below the title */
+  color: #343a40; /* Darker color for better contrast */
+  text-transform: uppercase; /* Uppercase text for emphasis */
+  letter-spacing: 1.5px; /* Increased letter spacing for readability */
+}
+
+.carousel-card-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Carousel arrows */
+.carousel-arrow {
+  background-color: transparent;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1px;
+  transition: color 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  color: #007bff;
+}
+
+/* Left arrow */
+.left-arrow {
+  position: absolute;
+  left: 10px;
+}
+
+/* Right arrow */
+.right-arrow {
+  position: absolute;
+  right: 10px;
+}
+.parent-button {
+  display: flex;
+  justify-content: center; /* Horizontally center the button */
+  align-items: center; /* Vertically center the button, optional */
+   /* Optional: to center vertically within the viewport */
+}
+/* Button styles */
+.button {
+  padding: 10px 20px; /* Padding for the button */
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Text color */
+  text-decoration: none;
+  margin-bottom: 40px;
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  font-family: 'cursive', cursive; /* Font family */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.button:hover {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.button:active,
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Example focus/active state */
+}

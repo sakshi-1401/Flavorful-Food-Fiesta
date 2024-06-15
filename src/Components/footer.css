@@ -1,0 +1,36 @@
+/* Footer.css */
+.footer {
+    background-color: #b6c5d4;
+    color: #ffffff;
+    padding: 40px 0;
+  }
+  
+  .footer h5 {
+    color: rgb(13,110,252);
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .footer p {
+    margin: 0 0 10px;
+    font-family: 'cursive', cursive;
+  }
+  
+  .footer .social-link {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 5px;
+  }
+  
+  .footer .social-link:hover {
+    text-decoration: underline;
+  }
+  
+  .footer .container {
+    max-width: 960px;
+  }
+  
+  .footer .text-center {
+    text-align: center;
+  }
+  

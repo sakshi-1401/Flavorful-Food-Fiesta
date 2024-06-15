@@ -1,0 +1,205 @@
+
+.custom-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    background-color: yellow;
+}
+
+.custom-p-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin: 10px;
+    background-color: blueviolet;
+}
+
+.card-content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.custom-center-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.custom-center-text h3{
+    color:white;
+}
+.custom-menu-heading {
+    /* display: flex; */
+    text-align: center;
+}
+
+.custom-cart {
+    display: flex;
+    background-color: blue;
+    margin-top: 10px;
+    margin-left: 10px; 
+}
+
+.custom-input-number {
+    width: 4rem;
+    margin: 10px 0;
+}
+
+.dish-image {
+    width: 250px; 
+    height: 250px;
+    margin-right: 20px;
+}
+
+.quantity-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-direction: row;
+}
+
+.quantity-input {
+    width: 3rem;
+    text-align: center;
+    margin: 0 0.5rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.custom-cart {
+    background-color: blue;
+}
+/* import React, { useState } from "react";
+import { Card } from "primereact/card";
+import { Button } from "primereact/button";
+import { InputNumber } from "primereact/inputnumber";
+import { Carousel } from "primereact/carousel";
+import "primereact/resources/themes/saga-blue/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
+import "./Menu.css"; // Include your custom CSS
+import id from "../asset/idli.png";
+import dosa from '../asset/b_dosa.png';
+import meduvada from '../asset/b_meduvada.png';
+
+const dishes = {
+  breakfast: [
+    { name: "Idli", image: id },
+    { name: "Dosa", image: dosa },
+    { name: "Meduvada", image: meduvada},
+  ],
+  lunch: [
+    { name: "Burger", image: "burger.jpg" },
+    { name: "Caesar Salad", image: "caesar-salad.jpg" },
+    { name: "Pasta", image: "pasta.jpg" },
+  ],
+  dinner: [
+    { name: "Steak", image: "steak.jpg" },
+    { name: "Grilled Salmon", image: "grilled-salmon.jpg" },
+    { name: "Risotto", image: "risotto.jpg" },
+  ],
+  cuisine: [
+    { name: "Sushi", image: "sushi.jpg" },
+    { name: "Tacos", image: "tacos.jpg" },
+    { name: "Pizza", image: "pizza.jpg" },
+  ],
+};
+
+const DishCard = ({ dish, onAddToCart }) => {
+  const [quantity, setQuantity] = useState(1);
+
+  return (
+    <Card className="custom-p-card">
+      <div className="custom-center-text">
+      <h3>{dish.name}</h3>
+        <img src={dish.image} alt={dish.name} className="dish-image" />
+        
+      </div>
+      <div className="card-content">
+  
+        
+        <div className="button-container">
+            <Button label="Add to Cart" icon="pi pi-shopping-cart" className='custom-cart' onClick={() => onAddToCart(dish, quantity)} />
+        </div>
+    </div>
+    </Card>
+  );
+};
+
+const Menu = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeSection, setActiveSection] = useState("breakfast");
+
+  const handleAddToCart = (dish, quantity) => {
+    console.log(`Added ${quantity} of ${dish.name} to cart.`);
+  };
+
+  const sections = ["breakfast", "lunch", "dinner", "cuisine"];
+
+  const handlePageChange = (e) => {
+    setActiveIndex(e.page);
+    setActiveSection(sections[e.page]);
+  };
+
+  const headerTemplate = (section) => (
+    <div className="p-text-center">
+      <h2>{section.charAt(0).toUpperCase() + section.slice(1)}</h2>
+    </div>
+  );
+
+  return (
+    <div className="p-d-flex p-flex-column p-ai-center p-p-4">
+      <h1 className="custom-menu-heading">
+        {activeSection.charAt(0).toUpperCase() + activeSection.slice(1)}
+      </h1>
+
+      <Carousel
+        value={sections}
+        itemTemplate={(section) => (
+          <div className="custom-cards-container">
+            {dishes[section].map((dish) => (
+              <DishCard
+                key={dish.name}
+                dish={dish}
+                onAddToCart={handleAddToCart}
+              />
+            ))}
+          </div>
+        )}
+        headerTemplate={(section) => headerTemplate(section)}
+        numVisible={1}
+        numScroll={1}
+        onPageChange={handlePageChange}
+      />
+      <div className="p-d-flex p-jc-center p-mt-4">
+        <Button
+          icon="pi pi-arrow-left"
+          onClick={() =>
+            setActiveIndex((prev) =>
+              prev === 0 ? sections.length - 1 : prev - 1
+            )
+          }
+        />
+        <Button
+          icon="pi pi-arrow-right"
+          onClick={() =>
+            setActiveIndex((prev) =>
+              prev === sections.length - 1 ? 0 : prev + 1
+            )
+          }
+        />
+      </div>
+    </div>
+  );
+};
+
+export default Menu; */

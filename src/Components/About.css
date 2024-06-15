@@ -1,0 +1,79 @@
+/* AboutUs.css */
+.about {
+  background-image: url('../asset/about.png');
+  background-size: cover; /* Ensures the background image covers the entire container */
+  background-position: center;
+  height: 100vh;
+}
+
+.about-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 70px;
+  margin-left: 50%;
+  font-family: 'cursive', cursive;
+}
+
+.about-content h2 {
+  margin-bottom: 20px;
+  color: rgb(13, 110, 252);
+  font-family: 'cursive', cursive;
+}
+
+.image-gallery {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.image-gallery img {
+  width: calc(33.33% - 10px);
+  margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .about-content {
+      padding: 50px;
+  }
+
+  .image-gallery img {
+      width: calc(50% - 10px);
+  }
+}
+
+
+@media (max-width: 992px) {
+  .about-content {
+      padding: 30px;
+  }
+
+  .image-gallery img {
+      width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+      padding: 20px;
+  }
+
+  .image-gallery img {
+      width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 576px) {
+  .about-content {
+      max-width: 100%;
+      padding: 10px;
+      margin-left: 0;
+  }
+
+  .image-gallery img {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}
